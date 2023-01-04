@@ -1,0 +1,32 @@
+//Rolan Jay P. Samonte
+//BSCS 1-B
+
+#include <stdio.h>
+
+int main() {
+    int count, i;
+    printf("How many numbers to be inputted? ");
+    scanf("%d", &count);
+    int num[count];
+    
+    printf("Type the numbers: \n");
+    for (i = 0; i < count; i++) {
+        scanf("%d", &num[i]);
+    }
+    
+    printf("Original array is: \n");
+    for (i = 0; i < count; i++) {
+        printf("%d \n", num[i]);
+    }
+    
+    int x = num[count-1];
+    num[count-1] = num[0];
+    num[0] = x;
+    
+    printf("Swapping first and last element: \n");
+    for (i = 0; i < count; i++) {
+        printf("%d \n", num[i]);
+    }
+    
+    return 0;
+}
