@@ -1,0 +1,28 @@
+//Rolan Jay P. Samonte
+//BSCS 1-B
+
+#include <stdio.h>
+
+int main() {
+    int count, i;
+    printf("How many numbers to be inputted? ");
+    scanf("%d", &count);
+    int num[count];
+    
+    printf("Type the numbers: \n");
+    for (i = 0; i < count; i++) {
+        scanf("%d", &num[i]);
+    }
+    
+    printf("Original array is: \n");
+    for (i = 0; i < count; i++) {
+        printf("%d \n", num[i]);
+    }
+    
+    printf("Reversing elements: \n");
+    for (i = count -1; i >= 0; i--) {
+        printf("%d \n", num[i]);
+    }
+    
+    return 0;
+}
