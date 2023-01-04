@@ -1,0 +1,19 @@
+//Rolan Jay P. Samonte
+//BSCS 1-B
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    int i;
+    char str[] = "Hello, this is Rolan.";
+    int spaces = 0;
+    
+    for (i = 0; i < strlen(str); i++) {
+        if (str[i] == ' '){
+            spaces++;
+        }
+    }
+    
+    printf("Words: %d", spaces+1);
+}
