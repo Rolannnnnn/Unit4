@@ -1,0 +1,26 @@
+//Rolan Jay P. Samonte
+//BSCS 1-B
+
+#include <stdio.h>
+
+int main() {
+    int count, i;
+    float ave;
+    float sum = 0;
+    printf("How many numbers to be inputted? ");
+    scanf("%d", &count);
+    float num[count];
+    
+    printf("Type the numbers: \n");
+    for (i = 0; i < count; i++) {
+        scanf("%f", &num[i]);
+        sum += num[i];
+    }
+    
+    ave = sum / count;
+    
+    printf("The sum is: %f \n", sum);
+    printf("The average is: %f", ave);
+
+    return 0;
+}
