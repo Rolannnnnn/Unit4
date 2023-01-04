@@ -1,0 +1,49 @@
+//Rolan Jay P. Samonte
+//BSCS 1-B
+
+#include <stdio.h>
+
+int main() {
+    int count, i, j, k, l;
+    char res;
+    
+    printf("How many elements? ");
+    scanf("%d", &count);
+    int array[count];
+    
+    while (1) {
+        printf("What do you want to do? \n a. Input Array Elements \n b. Display Array Elements \n c. Sort array using insertion sort method \n d. Sort array using selection method \n e. Sort array using bubble sort method. \n");
+        scanf(" %c", &res);
+        
+        switch (res) {
+            case 'a':
+                printf("Write the elements: \n");
+                for (i = 0; i < count; i++) {
+                    scanf("%d", &array[i]);
+                }
+                break;
+            case 'b':
+                for (i = 0; i < count; i++) {
+                    printf("%d \n", array[i]);
+                }
+                break;
+            case 'c':
+                for (i = 1; i < count; i++) {
+                    j = array[i];
+                    k = i - 1;
+                    while (j < array[k] && k >= 0) {
+                        array[k + 1] = array[k];
+                        --k;
+                    }
+                    array[k + 1] = j;
+                    for(l = 0; l < count; l++) {
+                        printf("%d ", array[l]);
+                    }
+                    printf("\n");
+                }
+                break;
+            case 'd':
+                
+        }
+    }
+}
